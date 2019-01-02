@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="game/guagame.js"></script>
+    <script src="game/utils.js"></script>
+    <script src="scene/main/ball.js"></script>
+    <script src="scene/main/paddle.js"></script>
+    <script src="scene/main/block.js"></script>
+    <script src="levels.js"></script>
+</head>
+<body>
+    <canvas id="id-canvas" width="500" height="400"  style="border:5px solid black;"></canvas>
+    <hr>
+    <input id="id-input-speed" type="range" value="30">
+</body>
+<script>
+    var paused = false
+    var blocks = []
+    var loads = {
+        tBall:'img/ball.png',
+        tBlock:'img/block.png',
+        tPaddle:'img/paddle.png',
+    }
+    //为了调试方便添加的debug mode 可以暂停程序以及关卡切换
+    //todo 方便调试加入一个拖拽球球的功能
+    //todo 侧面碰撞的情况考虑一下
+    //todo 场景抽象
+    //加载关卡的函数 应该加入一个场景编辑器的
+    var loadLevel = function (n,game) {
+        var blocks = []
+        var tempBlock = levels[n]
+        for(var i=0;i<tempBlock.length;i++){
+            var bk = block(tempBlock[i],game)
+            blocks.push(bk)
+        }
+        return blocks
+    }
+
+    var enableDebug = function (flag,guagame) {
+        if(!flag)
+            return
+        window.addEventListener('keydown',function (event) {
+            if(event.key === 'p'){
+                paused = !paused
+            }else if('1234567'.includes(event.key)){
+                blocks = []
+                blocks = loadLevel(Number(event.key)-1)
+            }
+        })
+    }
+    
+    // var f = function () {
+    //     log('123')
+    //     setTimeout("f()",200)
+    // }
+
+    var __main = function () {
+        var gua = GuaGame(loads)
+        var p = paddle(gua)
+        var b = ball(gua)
+        enableDebug(true,gua)
+        gua.update = function () {
+            if(paused)
+                return
+            if(p.collide(b))
+                b.speedY *= -1
+            for(var i = 0;i < blocks.length;i++){
+                // var bk = blocks[i]
+                if(blocks[i].collide(b)){
+                    if(blocks[i].killed === true)
+                        continue
+                    blocks[i].killed = true
+                    b.speedY *= -1
+                    gua.score += 10
+                }
+            }
+            b.move()
+        }
+        gua.draw = function () {
+            gua.drawImage(p)
+            gua.drawImage(b)
+            for(var i=0;i<blocks.length;i++){
+                if(!blocks[i].killed)
+                    gua.drawImage(blocks[i])
+            }
+            gua.context.font = "32px serif"
+            gua.context.fillText('score: ' + gua.score ,10 ,380 )
+        }
+        gua.registerAction('a',function () {
+            p.moveLeft()
+        })
+        gua.registerAction('d',function () {
+            p.moveRight()
+        })
+        gua.registerAction(' ',function () {
+            b.fire()
+        })
+        // 图片是异步加载的 图片可能显示不出来
+        // p.image.onload = function(){
+        //     context.drawImage(p.image,p.x,p.y)
+        // }
+        // gua.varyUpdate()
+    }
+
+    __main()
+</script>
+</html>
