@@ -34,21 +34,6 @@ var GuaGame = function (loads) {
         return blocks
     }
 
-    // setInterval(function () {
-    //     //events
-    //     var actions = Object.keys(g.actions)
-    //     for(var i=0;i < actions.length;i++){
-    //         var key = actions[i]
-    //         if(g.keydowns[key]){
-    //             //如果按键被按下 调用注册的action
-    //             g.actions[key]()
-    //         }
-    //     }
-    //     g.update()
-    //     context.clearRect(0,0,canvas.width,canvas.height)
-    //     g.draw()
-    // },1000/30)
-
     g.runloop = function(){
         var actions = Object.keys(g.actions)
         for(var i=0;i < actions.length;i++){
