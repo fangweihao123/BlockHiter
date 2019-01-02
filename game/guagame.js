@@ -1,11 +1,11 @@
-var GuaGame = function (loads) {
+var GuaGame = function (loads,callback) {
     //loads 是一个对象 里面是图片的名字 程序会在所有图片载入成功后才运行
     var g = {
         actions:{},
         keydowns:{},
         images:{},
     }
-    //todo guagame 用单例
+    //todo guagame 用单例 可能需要先实现面向对象的编程 涉及到code refactor
     g.score = 0
     g.canvas = document.getElementById('id-canvas')
     g.context = g.canvas.getContext('2d')
@@ -18,7 +18,7 @@ var GuaGame = function (loads) {
         g.keydowns[event.key] = true
     })
     window.addEventListener('keyup',function (event) {
-        log(event.key)
+        //log(event.key)
         g.keydowns[event.key] = false
     })
     g.registerAction = function(key,callback){
@@ -56,31 +56,16 @@ var GuaGame = function (loads) {
         },1000/fps)
     }
 
-
-    //预先载入所有程序
-    var names = Object.keys(loads)
-    for(var i=0;i<names.length;i++){
-        var name = names[i]
-        var path= loads[name]
-        var img = new Image()
-        img.src = path
-        img.onload = function () {
-            g.images[name] = img
-            if(g.images.length === loads.length)
-                g.run()
-        }
-    }
-
-    //开始程序 所有图片载入成功后才会调用g.run()这个开始程序
     g.run = function(){
         setTimeout(function () {
             g.runloop()
         },1000)
     }
 
-    //todo 现在想实现一个预先加载一份图片到内存然后相同的block使用相同的copy的功能 是调用顺序出问题
+    //将图片提前加载到内存中,只保留一份内存,需要时候重用
     g.imageByName = function (name) {
         var img = g.images[name]
+        // log(img)
         var image = {
             width : img.width,
             height : img.height,
@@ -88,6 +73,28 @@ var GuaGame = function (loads) {
         }
         return image
     }
+
+
+    //预先载入所有程序
+    var names = Object.keys(loads)
+    for(var i=0;i<names.length;i++){
+        let name = names[i]
+        var path= loads[name]
+        let img = new Image()
+        img.src = path
+        img.onload = function () {
+            g.images[name] = img
+            log(img)
+            if (Object.keys(g.images).length === names.length){
+                //这里是图片加载完成的阶段 需要调用回调函数
+                //log(loads.length)
+                callback(g)
+                g.run()
+            }
+        }
+    }
+
+    //开始程序 所有图片载入成功后才会调用g.run()这个开始程序
 
     return g
 }

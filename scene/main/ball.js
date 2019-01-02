@@ -1,13 +1,18 @@
 var ball = function (game) {
-    var image = game.imageByName('tBall')
-    var o = {
-        image : image,
-        x : 250,
-        y : 280,
-        speedX : 10,
-        speedY : 10,
-        fired : false,
-    }
+    var o = game.imageByName('tBall')
+    o.x = 250
+    o.y = 280
+    o.speedY = 10
+    o.speedX = 10
+    o.fired = false
+    // var o = {
+    //     image : image,
+    //     x : 250,
+    //     y : 280,
+    //     speedX : 10,
+    //     speedY : 10,
+    //     fired : false,
+    // }
     o.move = function () {
         if(!o.fired)
             return

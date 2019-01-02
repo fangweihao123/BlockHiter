@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d5b727f6-236e-4137-8c97-96a823b3fcda" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/game/guagame.js" beforeDir="false" afterPath="$PROJECT_DIR$/game/guagame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scene/main/ball.js" beforeDir="false" afterPath="$PROJECT_DIR$/scene/main/ball.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scene/main/block.js" beforeDir="false" afterPath="$PROJECT_DIR$/scene/main/block.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scene/main/paddle.js" beforeDir="false" afterPath="$PROJECT_DIR$/scene/main/paddle.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,14 +22,14 @@
     <favorites_list name="js" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4544017">
+    <splitter split-orientation="horizontal" split-proportion="0.5097522">
       <split-first>
         <leaf>
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="316">
-                  <caret line="61" selection-start-line="61" selection-end-line="61" />
+                <state relative-caret-position="204">
+                  <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
                   <folding>
                     <element signature="n#style#0;n#canvas#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -36,8 +40,8 @@
           <file leaf-file-name="paddle.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scene/main/paddle.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
-                  <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+                <state relative-caret-position="52">
+                  <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
@@ -45,8 +49,8 @@
           <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/game/utils.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="260">
-                  <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+                <state relative-caret-position="130">
+                  <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -63,11 +67,8 @@
           <file leaf-file-name="guagame.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/game/guagame.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
-                  <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
-                  <folding>
-                    <element signature="e#1263#1279#0" />
-                  </folding>
+                <state relative-caret-position="182">
+                  <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
                 </state>
               </provider>
             </entry>
@@ -75,8 +76,8 @@
           <file leaf-file-name="ball.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scene/main/ball.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="26">
-                  <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+                <state relative-caret-position="156">
+                  <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
                 </state>
               </provider>
             </entry>
@@ -84,8 +85,8 @@
           <file leaf-file-name="block.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scene/main/block.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="52">
-                  <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+                <state relative-caret-position="156">
+                  <caret line="6" column="4" selection-start-line="6" selection-start-column="7" selection-end-line="12" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
@@ -113,9 +114,17 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>log</find>
       <find>guagame</find>
+      <find>log</find>
+      <find>imagebyNa</find>
+      <find>images</find>
+      <find>GuaGame</find>
+      <find>score</find>
+      <find>loadLevel</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -131,8 +140,11 @@
         <option value="$PROJECT_DIR$/ball.js" />
         <option value="$PROJECT_DIR$/block.js" />
         <option value="$PROJECT_DIR$/guagame.js" />
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/scene/main/block.js" />
+        <option value="$PROJECT_DIR$/scene/main/ball.js" />
+        <option value="$PROJECT_DIR$/scene/main/paddle.js" />
         <option value="$PROJECT_DIR$/game/guagame.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -169,6 +181,11 @@
               <item name="js" type="b2602c69:ProjectViewProjectNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -223,14 +240,14 @@
       <workItem from="1546077390915" duration="4965000" />
       <workItem from="1546227188688" duration="6769000" />
       <workItem from="1546247758087" duration="11818000" />
-      <workItem from="1546306350495" duration="27766000" />
+      <workItem from="1546306350495" duration="36632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54426000" />
+    <option name="totallyTimeSpent" value="63292000" />
   </component>
-  <component name="TodoView" selected-index="1">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -243,15 +260,15 @@
     <frame x="-1" y="-35" width="1922" height="1116" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2398524" />
-      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.15827338" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.23932526" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.27029803" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32887974" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24986821" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.663926" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.33299074" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32999474" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -305,9 +322,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="936">
           <caret line="36" selection-start-line="36" selection-end-line="37" />
-          <folding>
-            <element signature="e#1263#1279#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -424,13 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scene/main/paddle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2435">
@@ -438,43 +445,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/utils.js">
+    <entry file="file://$PROJECT_DIR$/scene/main/block.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="156">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="7" selection-end-line="12" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scene/main/block.js">
+    <entry file="file://$PROJECT_DIR$/scene/main/paddle.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scene/main/ball.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+        <state relative-caret-position="156">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/game/utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-          <folding>
-            <element signature="n#style#0;n#canvas#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="130">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game/guagame.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+        <state relative-caret-position="182">
+          <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
           <folding>
-            <element signature="e#1263#1279#0" />
+            <element signature="n#style#0;n#canvas#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

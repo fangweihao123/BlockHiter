@@ -11,7 +11,7 @@
     <script src="levels.js"></script>
 </head>
 <body>
-    <canvas id="id-canvas" width="500" height="400"  style="border:5px solid black;"></canvas>
+    <canvas id="id-canvas" width="700" height="450"  style="border:5px solid black;background: url('./img/background.jpg'); background-size:100% 100%"></canvas>
     <hr>
     <input id="id-input-speed" type="range" value="30">
 </body>
@@ -26,7 +26,7 @@
     //为了调试方便添加的debug mode 可以暂停程序以及关卡切换
     //todo 方便调试加入一个拖拽球球的功能
     //todo 侧面碰撞的情况考虑一下
-    //todo 场景抽象
+    //todo 场景抽象 通过写类实现
     //加载关卡的函数 应该加入一个场景编辑器的
     var loadLevel = function (n,game) {
         var blocks = []
@@ -46,62 +46,60 @@
                 paused = !paused
             }else if('1234567'.includes(event.key)){
                 blocks = []
-                blocks = loadLevel(Number(event.key)-1)
+                blocks = loadLevel(Number(event.key)-1,guagame)
             }
         })
     }
-    
-    // var f = function () {
-    //     log('123')
-    //     setTimeout("f()",200)
-    // }
 
     var __main = function () {
-        var gua = GuaGame(loads)
-        var p = paddle(gua)
-        var b = ball(gua)
-        enableDebug(true,gua)
-        gua.update = function () {
-            if(paused)
-                return
-            if(p.collide(b))
-                b.speedY *= -1
-            for(var i = 0;i < blocks.length;i++){
-                // var bk = blocks[i]
-                if(blocks[i].collide(b)){
-                    if(blocks[i].killed === true)
-                        continue
-                    blocks[i].killed = true
+        var game = GuaGame(loads,function (gua) {
+            //在图片加载完成之后再执行以上的代码 不然图片对象是undefined
+            var p = paddle(gua)
+            var b = ball(gua)
+            enableDebug(true,gua)
+            gua.update = function () {
+                if(paused)
+                    return
+                if(p.collide(b))
                     b.speedY *= -1
-                    gua.score += 10
+                for(var i = 0;i < blocks.length;i++){
+                    // var bk = blocks[i]
+                    if(blocks[i].collide(b)){
+                        if(blocks[i].killed === true)
+                            continue
+                        blocks[i].killed = true
+                        b.speedY *= -1
+                        gua.score += 10
+                    }
                 }
+                b.move()
             }
-            b.move()
-        }
-        gua.draw = function () {
-            gua.drawImage(p)
-            gua.drawImage(b)
-            for(var i=0;i<blocks.length;i++){
-                if(!blocks[i].killed)
-                    gua.drawImage(blocks[i])
+            gua.draw = function () {
+                gua.drawImage(p)
+                gua.drawImage(b)
+                for(var i=0;i<blocks.length;i++){
+                    if(!blocks[i].killed)
+                        gua.drawImage(blocks[i])
+                }
+                gua.context.font = "36px serif"
+                gua.context.fillStyle = "white"
+                gua.context.fillText('score: ' + gua.score ,30 ,400 )
             }
-            gua.context.font = "32px serif"
-            gua.context.fillText('score: ' + gua.score ,10 ,380 )
-        }
-        gua.registerAction('a',function () {
-            p.moveLeft()
+            gua.registerAction('a',function () {
+                p.moveLeft()
+            })
+            gua.registerAction('d',function () {
+                p.moveRight()
+            })
+            gua.registerAction(' ',function () {
+                b.fire()
+            })
+            // 图片是异步加载的 图片可能显示不出来
+            // p.image.onload = function(){
+            //     context.drawImage(p.image,p.x,p.y)
+            // }
+            // gua.varyUpdate()
         })
-        gua.registerAction('d',function () {
-            p.moveRight()
-        })
-        gua.registerAction(' ',function () {
-            b.fire()
-        })
-        // 图片是异步加载的 图片可能显示不出来
-        // p.image.onload = function(){
-        //     context.drawImage(p.image,p.x,p.y)
-        // }
-        // gua.varyUpdate()
     }
 
     __main()
