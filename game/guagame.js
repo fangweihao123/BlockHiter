@@ -6,12 +6,19 @@ var GuaGame = function (loads,callback) {
         images:{},
     }
     //todo guagame 用单例 可能需要先实现面向对象的编程 涉及到code refactor
+    //todo 希望最终能实现像是从上到下不断下坠的俄罗斯方块这样的类型
     g.score = 0
     g.canvas = document.getElementById('id-canvas')
     g.context = g.canvas.getContext('2d')
 
     g.drawImage = function(img){
         g.context.drawImage(img.image,img.x,img.y)
+    }
+
+    g.drawRect = function(o){
+        g.context.fillStyle="green"
+        g.context.rect(o.x,o.y,o.width,o.height)
+        g.context.fill();
     }
 
     window.addEventListener('keydown',function (event) {
@@ -21,6 +28,7 @@ var GuaGame = function (loads,callback) {
         //log(event.key)
         g.keydowns[event.key] = false
     })
+
     g.registerAction = function(key,callback){
         g.actions[key] = callback
     }

@@ -24,7 +24,7 @@
         tPaddle:'img/paddle.png',
     }
     //为了调试方便添加的debug mode 可以暂停程序以及关卡切换
-    //todo 方便调试加入一个拖拽球球的功能
+    //todo 方便调试加入一个拖拽球球的功能（已经实现)  但是碰撞还存在问题
     //todo 侧面碰撞的情况考虑一下
     //todo 场景抽象 通过写类实现
     //加载关卡的函数 应该加入一个场景编辑器的
@@ -38,7 +38,7 @@
         return blocks
     }
 
-    var enableDebug = function (flag,guagame) {
+    var enableDebug = function (flag,gua,ball) {
         if(!flag)
             return
         window.addEventListener('keydown',function (event) {
@@ -46,9 +46,30 @@
                 paused = !paused
             }else if('1234567'.includes(event.key)){
                 blocks = []
-                blocks = loadLevel(Number(event.key)-1,guagame)
+                blocks = loadLevel(Number(event.key)-1,gua)
             }
         })
+
+        var pressed = false
+
+        gua.canvas.addEventListener('mousedown',function (event) {
+            // log('mouse down')
+            pressed = true
+        })
+
+        gua.canvas.addEventListener('mousemove',function (event) {
+            // log('mouse move')
+            if(pressed){
+                ball.x = event.offsetX
+                ball.y = event.offsetY
+            }
+        })
+
+        gua.canvas.addEventListener('mouseup',function (event) {
+            // log('mouse up')
+            pressed = false
+        })
+
     }
 
     var __main = function () {
@@ -56,7 +77,7 @@
             //在图片加载完成之后再执行以上的代码 不然图片对象是undefined
             var p = paddle(gua)
             var b = ball(gua)
-            enableDebug(true,gua)
+            enableDebug(true,gua,b)
             gua.update = function () {
                 if(paused)
                     return
@@ -77,6 +98,8 @@
             gua.draw = function () {
                 gua.drawImage(p)
                 gua.drawImage(b)
+                // gua.drawRect(p)
+                // gua.drawRect(b)
                 for(var i=0;i<blocks.length;i++){
                     if(!blocks[i].killed)
                         gua.drawImage(blocks[i])
@@ -94,11 +117,6 @@
             gua.registerAction(' ',function () {
                 b.fire()
             })
-            // 图片是异步加载的 图片可能显示不出来
-            // p.image.onload = function(){
-            //     context.drawImage(p.image,p.x,p.y)
-            // }
-            // gua.varyUpdate()
         })
     }
 
