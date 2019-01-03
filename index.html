@@ -25,12 +25,11 @@
     }
 
     //为了调试方便添加的debug mode 可以暂停程序以及关卡切换
-    //todo:finished 方便调试加入一个拖拽球球的功能（已经实现)  但是碰撞还存在问题 (碰撞的问题已经解决了 用interrect函数)
     //todo:features 侧面碰撞的情况考虑一下 （这个feature)目前就不考虑了
     //todo 场景抽象 通过写类实现
-    //todo 要抽象可以把动作也抽象一下
+    //todo:finished 要抽象可以把动作也抽象一下
     var __main = function () {
-        var game = GuaGame(loads,function (gua) {
+        var game = new GuaGame(loads,function (gua) {
             //在图片加载完成之后再执行以上的代码 不然图片对象是undefined
             var s = MainScene(gua,blocks)
             gua.update = function () {
