@@ -82,6 +82,14 @@ var GuaGame = function (loads,callback) {
         return image
     }
 
+    //注册这个场景中的所有动作
+    g.registerScene = function (scene) {
+        var names = Object.keys(scene.actions)
+        for (var i = 0; i < names.length; i++) {
+            g.registerAction(names[i],scene.actions[names[i]])
+        }
+    }
+
 
     //预先载入所有程序
     var names = Object.keys(loads)
