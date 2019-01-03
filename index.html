@@ -23,10 +23,12 @@
         tBlock:'img/block.png',
         tPaddle:'img/paddle.png',
     }
+
     //为了调试方便添加的debug mode 可以暂停程序以及关卡切换
-    //todo 方便调试加入一个拖拽球球的功能（已经实现)  但是碰撞还存在问题
-    //todo 侧面碰撞的情况考虑一下
+    //todo:finished 方便调试加入一个拖拽球球的功能（已经实现)  但是碰撞还存在问题 (碰撞的问题已经解决了 用interrect函数)
+    //todo:features 侧面碰撞的情况考虑一下 （这个feature)目前就不考虑了
     //todo 场景抽象 通过写类实现
+    //todo 要抽象可以把动作也抽象一下
     //加载关卡的函数 应该加入一个场景编辑器的
     var loadLevel = function (n,game) {
         var blocks = []

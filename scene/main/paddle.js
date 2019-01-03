@@ -20,12 +20,14 @@ var paddle = function (game) {
         if(o.x > canvas.width-o.image.width)
             o.x = canvas.width-o.image.width
     }
+    //collide 应该分为两种情况 一种是侧面撞击 x方向速度相反 另外一种是上下相撞 y方向速度相反
     o.collide = function (ball) {
-        if(ball.y + ball.image.height > o.y){
-            if(ball.x>o.x&&ball.x<o.x+o.image.width){
-                return true
-            }
-        }
+        // if(ball.y + ball.height > o.y){
+        //     if(ball.x>o.x&&ball.x<o.x+o.image.width){
+        //         return true
+        //     }
+        // }
+        return rectIntersect(ball,o)||rectIntersect(o,ball)
     }
     return o
 }

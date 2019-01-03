@@ -10,6 +10,15 @@ var imageFromPath = function (path) {
 }
 
 
+var aInb = function (a,b) {
+    if(a.x > b.x && a.x < a.x+a.width){
+        if(a.y > b.y && a.y < b.y+b.height)
+            return true
+    }
+    return false
+}
+
+
 //矩形相交函数
 var rectIntersect = function (a,b) {
     if(a.x + a.image.width > b.x && a.x + a.image.width < b.x+b.image.width){
