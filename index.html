@@ -8,16 +8,19 @@
     <script src="scene/main/ball.js"></script>
     <script src="scene/main/paddle.js"></script>
     <script src="scene/main/block.js"></script>
-    <script src="scene/main/main_scene.js"
+    <script src="scene/main/main_scene.js"></script>
+    <script src="scene/abstract_scene.js"></script>
+    <script src="scene/start/start_scene.js"></script>
     <script src="levels.js"></script>
 </head>
 <body>
-    <canvas id="id-canvas" width="700" height="450"  style="border:5px solid black;background: url('./img/background.jpg'); background-size:100% 100%"></canvas>
+    <canvas id="id-canvas" width="700" height="450"  style="border:5px solid black;background: url('./img/background.jpg');background-size:100% 100%"></canvas>
     <hr>
     <input id="id-input-speed" type="range" value="30">
 </body>
 <script>
     var blocks = []
+    //todo 这一块直接防到main_scene中 就不用作为参数传来传去了
     var loads = {
         tBall:'img/ball.png',
         tBlock:'img/block.png',
@@ -31,7 +34,8 @@
     var __main = function () {
         var game = new GuaGame(loads,function (gua) {
             //在图片加载完成之后再执行以上的代码 不然图片对象是undefined
-            var s = MainScene(gua,blocks)
+            // var s = MainScene(gua,blocks)
+            var s = new StartScene(gua)
             gua.update = function () {
                 s.update()
             }
