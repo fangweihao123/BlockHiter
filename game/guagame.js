@@ -18,8 +18,12 @@ function GuaGame(loads,callback) {
         g.keydowns[event.key] = false
     })
     //预先载入所有程序
-    this.init(loads,callback)
+    // this.init(loads,callback)           //在constructor里面要加载图片 加载完图片才能调用callback函数
 }
+
+// GuaGame.prototype.runWithScene = function(scene){
+//     this.images
+// }
 
 GuaGame.prototype.test = function(){
     log('test')
@@ -76,20 +80,8 @@ GuaGame.prototype.run = function(){
     var g = this
     //todo 这是js的闭包的原因么？ 延迟执行的函数指向this
     setTimeout(function() {
-        g.test()
         g.runloop()
     },1000)
-}
-
-GuaGame.prototype.imageByName = function (name) {
-    //将图片提前加载到内存中,只保留一份内存,需要时候重用
-    var img = this.images[name]
-    var image = {
-        width : img.width,
-        height : img.height,
-        image : img,
-    }
-    return image
 }
 
 GuaGame.prototype.init = function (loads,callback) {
@@ -107,7 +99,6 @@ GuaGame.prototype.init = function (loads,callback) {
                 //这里是图片加载完成的阶段 需要调用回调函数
                 //log(loads.length)
                 callback(g)
-                g.test()
                 g.run()
             }
         }
@@ -117,6 +108,7 @@ GuaGame.prototype.init = function (loads,callback) {
 
 GuaGame.prototype.registerScene = function (scene) {
     //注册这个场景中的所有动作
+    log('register')
     var names = Object.keys(scene.actions)
     for (var i = 0; i < names.length; i++) {
         this.registerAction(names[i],scene.actions[names[i]])

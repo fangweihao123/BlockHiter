@@ -1,9 +1,11 @@
-function StartScene(game) {
-    AbstractScene.call(this)
-    this.game = game
+function StartScene(game,callback) {
+    AbstractScene.call(this,game,callback)
     this.game.canvas.addEventListener('mousedown',function (event) {
         log('mouse down')
     })
+    this.imgToPath('start','img/start.png')
+    this.imgToCache()       //加载完成后才能调用回调
+
     //而且可以继承父类的属性
     // log(this.actions)
 }
@@ -21,9 +23,11 @@ StartScene.prototype.constructor = StartScene;
 // }
 //
 StartScene.prototype.draw = function () {
+    var button = this.imageByName('start')
     var img = new Image()
     img.src = 'img/start.png'
     this.game.context.drawImage(img,250,250,130,80)
     // log('child draw')
 }
+
 

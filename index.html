@@ -11,6 +11,8 @@
     <script src="scene/main/main_scene.js"></script>
     <script src="scene/abstract_scene.js"></script>
     <script src="scene/start/start_scene.js"></script>
+    <script src="scene/my_object.js"></script>
+    <script src="scene/button.js"></script>
     <script src="levels.js"></script>
 </head>
 <body>
@@ -21,38 +23,51 @@
 <script>
     var blocks = []
     //todo 这一块直接防到main_scene中 就不用作为参数传来传去了
-    var loads = {
-        tBall:'img/ball.png',
-        tBlock:'img/block.png',
-        tPaddle:'img/paddle.png',
-    }
+    // var loads = {
+    //     tBall:'img/ball.png',
+    //     tBlock:'img/block.png',
+    //     tPaddle:'img/paddle.png',
+    // }
 
     //为了调试方便添加的debug mode 可以暂停程序以及关卡切换
     //todo:features 侧面碰撞的情况考虑一下 （这个feature)目前就不考虑了
     //todo 场景抽象 通过写类实现
     //todo:finished 要抽象可以把动作也抽象一下
     var __main = function () {
-        var game = new GuaGame(loads,function (gua) {
-            //在图片加载完成之后再执行以上的代码 不然图片对象是undefined
-            // var s = MainScene(gua,blocks)
-            var s = new StartScene(gua)
-            gua.update = function () {
-                s.update()
-            }
-            gua.draw = function () {
-                s.draw()
-            }
-            gua.registerScene(s)
-            // gua.registerAction('a',function () {
-            //     p.moveLeft()
-            // })
-            // gua.registerAction('d',function () {
-            //     p.moveRight()
-            // })
-            // gua.registerAction(' ',function () {
-            //     b.fire()
-            // })
+        var game = new GuaGame()
+        var s = new StartScene(game,function (gua) {
+                gua.update = function () {
+                    s.update()
+                }
+                gua.draw = function () {
+                    s.draw()
+                }
+                gua.registerScene(s)
         })
+
+        // var game = new GuaGame(function (gua) {
+        //     //在图片加载完成之后再执行以上的代码 不然图片对象是undefined
+        //     // var s = MainScene(gua,blocks)
+        //     var s = new StartScene(gua)
+        //
+        //     gua.update = function () {
+        //         s.update()
+        //     }
+        //     gua.draw = function () {
+        //         s.draw()
+        //     }
+        //     gua.registerScene(s)
+        //     gua.runWithScene(s)
+        //     // gua.registerAction('a',function () {
+        //     //     p.moveLeft()
+        //     // })
+        //     // gua.registerAction('d',function () {
+        //     //     p.moveRight()
+        //     // })
+        //     // gua.registerAction(' ',function () {
+        //     //     b.fire()
+        //     // })
+        // })
     }
 
     __main()
