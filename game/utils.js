@@ -11,7 +11,7 @@ var imageFromPath = function (path) {
 
 
 var aInb = function (a,b) {
-    if(a.x > b.x && a.x < a.x+a.width){
+    if(a.x > b.x && a.x < b.x+b.width){
         if(a.y > b.y && a.y < b.y+b.height)
             return true
     }

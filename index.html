@@ -11,8 +11,9 @@
     <script src="scene/main/main_scene.js"></script>
     <script src="scene/abstract_scene.js"></script>
     <script src="scene/start/start_scene.js"></script>
-    <script src="scene/my_object.js"></script>
-    <script src="scene/button.js"></script>
+    <script src="Model/Model2D.js"></script>
+    <script src="Model/button.js"></script>
+    <script src="Model/Point2D.js"></script>
     <script src="levels.js"></script>
 </head>
 <body>
@@ -35,15 +36,7 @@
     //todo:finished 要抽象可以把动作也抽象一下
     var __main = function () {
         var game = new GuaGame()
-        var s = new StartScene(game,function (gua) {
-                gua.update = function () {
-                    s.update()
-                }
-                gua.draw = function () {
-                    s.draw()
-                }
-                gua.registerScene(s)
-        })
+        var s = new StartScene(game)
 
         // var game = new GuaGame(function (gua) {
         //     //在图片加载完成之后再执行以上的代码 不然图片对象是undefined

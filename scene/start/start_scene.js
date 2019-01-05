@@ -1,10 +1,17 @@
-function StartScene(game,callback) {
-    AbstractScene.call(this,game,callback)
-    this.game.canvas.addEventListener('mousedown',function (event) {
-        log('mouse down')
+function StartScene(game) {
+    AbstractScene.call(this,game,this.init)
+    this.game.canvas.addEventListener('mousedown',(event)=>{
+        var point = new Point2D()
+        point.x = event.offsetX
+        point.y = event.offsetY
+        if(aInb(point,this.models['start'])){
+            log('mouse down')
+
+        }
     })
-    this.imgToPath('start','img/start.png')
-    this.imgToCache()       //加载完成后才能调用回调
+    this.createModel('start',250,250,130,80,'img/start.png')
+    this.imgToCache()
+    //加载完成后才能调用回调
 
     //而且可以继承父类的属性
     // log(this.actions)
@@ -23,11 +30,20 @@ StartScene.prototype.constructor = StartScene;
 // }
 //
 StartScene.prototype.draw = function () {
-    var button = this.imageByName('start')
-    var img = new Image()
-    img.src = 'img/start.png'
-    this.game.context.drawImage(img,250,250,130,80)
+    //var button = new Button(250,250,130,80,this.imageCache['start'])
+    this.game.drawModel2D(this.models['start'])
+    // this.game.context.drawImage(button.image,250,250,130,80)
     // log('child draw')
 }
 
+StartScene.prototype.init = function (game){
+    var g = this
+    game.update = function () {
+        g.update()
+    }
+    game.draw = function () {
+        g.draw()
+    }
+    game.registerScene(g)
+}
 

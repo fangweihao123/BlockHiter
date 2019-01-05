@@ -29,28 +29,12 @@ GuaGame.prototype.test = function(){
     log('test')
 }
 
-GuaGame.prototype.drawImage = function(img){
-    this.context.drawImage(img.image,img.x,img.y)
-}
-
-GuaGame.prototype.drawRect = function(o){
-    this.context.fillStyle="green"
-    this.context.rect(o.x,o.y,o.width,o.height)
-    this.context.fill();
+GuaGame.prototype.drawModel2D = function(model){
+    this.context.drawImage(model.image,model.x,model.y,model.width,model.height)
 }
 
 GuaGame.prototype.registerAction = function(key,callback){
     this.actions[key] = callback
-}
-
-GuaGame.prototype.loadLevel = function(n){
-    var blocks = []
-    var tempBlock = levels[n]
-    for(var i=0;i<tempBlock.length;i++){
-        var bk = block(tempBlock[i],this)
-        blocks.push(bk)
-    }
-    return blocks
 }
 
 GuaGame.prototype.runloop = function(){
@@ -84,31 +68,11 @@ GuaGame.prototype.run = function(){
     },1000)
 }
 
-GuaGame.prototype.init = function (loads,callback) {
-    var g = this
-    var names = Object.keys(loads)
-    for(var i=0;i<names.length;i++){
-        let name = names[i]
-        var path= loads[name]
-        let img = new Image()
-        img.src = path
-        img.onload = function () {
-            log(g.images)
-            g.images[name] = img
-            if (Object.keys(g.images).length === names.length){
-                //这里是图片加载完成的阶段 需要调用回调函数
-                //log(loads.length)
-                callback(g)
-                g.run()
-            }
-        }
-    }
-    //开始程序 所有图片载入成功后才会调用g.run()这个开始程序
-}
-
 GuaGame.prototype.registerScene = function (scene) {
     //注册这个场景中的所有动作
-    log('register')
+    this.actions = {}
+    // if(scene.actions===undefined)
+    //     return
     var names = Object.keys(scene.actions)
     for (var i = 0; i < names.length; i++) {
         this.registerAction(names[i],scene.actions[names[i]])
