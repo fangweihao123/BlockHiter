@@ -1,7 +1,7 @@
-function Model2D(x,y,width,height,path) {
+function Model2D(name,x,y,width,height) {
     this.x = x
     this.y = y
     this.width = width
     this.height = height
-    this.path = path
+    this.name = name
 }

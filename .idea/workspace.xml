@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5b727f6-236e-4137-8c97-96a823b3fcda" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Model/Model2D.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/Point2D.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Model2D.js" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Model2D.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/button.js" beforeDir="false" afterPath="$PROJECT_DIR$/Model/button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/guagame.js" beforeDir="false" afterPath="$PROJECT_DIR$/game/guagame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/game/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scene/abstract_scene.js" beforeDir="false" afterPath="$PROJECT_DIR$/scene/abstract_scene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scene/button.js" beforeDir="false" afterPath="$PROJECT_DIR$/Model/button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scene/main/ball.js" beforeDir="false" afterPath="$PROJECT_DIR$/scene/main/ball.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scene/main/block.js" beforeDir="false" afterPath="$PROJECT_DIR$/scene/main/block.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scene/main/main_scene.js" beforeDir="false" afterPath="$PROJECT_DIR$/scene/main/main_scene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scene/my_object.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scene/main/paddle.js" beforeDir="false" afterPath="$PROJECT_DIR$/scene/main/paddle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scene/start/start_scene.js" beforeDir="false" afterPath="$PROJECT_DIR$/scene/start/start_scene.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -28,14 +29,14 @@
     <favorites_list name="js" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5424354">
+    <splitter split-orientation="horizontal" split-proportion="0.56035846">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="start_scene.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="start_scene.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scene/start/start_scene.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="307">
-                  <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+                <state relative-caret-position="824">
+                  <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
                 </state>
               </provider>
             </entry>
@@ -52,8 +53,26 @@
           <file leaf-file-name="button.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Model/button.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="26">
-                  <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+                <state relative-caret-position="52">
+                  <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main_scene.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/scene/main/main_scene.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="572">
+                  <caret line="121" column="16" selection-start-line="121" selection-start-column="16" selection-end-line="121" selection-end-column="16" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="paddle.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/scene/main/paddle.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="182">
+                  <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
                 </state>
               </provider>
             </entry>
@@ -61,109 +80,79 @@
           <file leaf-file-name="Model2D.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Model/Model2D.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="52">
-                  <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="1" />
+                <state relative-caret-position="104">
+                  <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="ball.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scene/main/ball.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="156">
-                  <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-                </state>
-              </provider>
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="vertical" split-proportion="0.5511551">
-          <split-first>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/game/utils.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="312">
-                      <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="main_scene.js" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/scene/main/main_scene.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="1066">
-                      <caret line="41" selection-start-line="40" selection-end-line="41" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="abstract_scene.js" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/scene/abstract_scene.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="104">
-                      <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="paddle.js" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/scene/main/paddle.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="156">
-                      <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="block.js" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/scene/main/block.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="364">
-                      <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="levels.js" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/levels.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="286">
-                      <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/index.html">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="52">
-                      <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-                      <folding>
-                        <element signature="n#style#0;n#canvas#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="guagame.js" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/game/guagame.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="139">
-                      <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="74" selection-end-column="17" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="286">
+                  <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+                  <folding>
+                    <element signature="n#style#0;n#canvas#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/game/utils.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="572">
+                  <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="guagame.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/game/guagame.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="234">
+                  <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="abstract_scene.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/scene/abstract_scene.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="78">
+                  <caret line="15" selection-start-line="15" selection-end-line="15" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="block.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/scene/main/block.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="78">
+                  <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="levels.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/levels.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="104">
+                  <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
       </split-second>
     </splitter>
   </component>
@@ -177,15 +166,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>log</find>
-      <find>imagebyNa</find>
-      <find>images</find>
-      <find>GuaGame</find>
       <find>drawIMage</find>
       <find>draw</find>
       <find>enable</find>
       <find>Object</find>
-      <find>collide</find>
       <find>guagame</find>
       <find>init</find>
       <find>gua</find>
@@ -193,7 +177,6 @@
       <find>drawI</find>
       <find>mousedow</find>
       <find>test</find>
-      <find>image</find>
       <find>new Image</find>
       <find>onload</find>
       <find>=</find>
@@ -201,14 +184,23 @@
       <find>loads</find>
       <find>drawIMa</find>
       <find>loadLev</find>
-      <find>loadLevel</find>
       <find>offsetX</find>
-      <find>update</find>
       <find>register</find>
+      <find>loadLevel</find>
+      <find>Button</find>
+      <find>paddle</find>
+      <find>enableDebug</find>
+      <find>paused</find>
+      <find>log</find>
+      <find>update</find>
+      <find>blocks</find>
+      <find>image</find>
+      <find>collide</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>this</replace>
+      <replace>Paddle</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -225,21 +217,21 @@
         <option value="$PROJECT_DIR$/ball.js" />
         <option value="$PROJECT_DIR$/block.js" />
         <option value="$PROJECT_DIR$/guagame.js" />
-        <option value="$PROJECT_DIR$/scene/main/block.js" />
-        <option value="$PROJECT_DIR$/scene/main/ball.js" />
-        <option value="$PROJECT_DIR$/scene/main/paddle.js" />
         <option value="$PROJECT_DIR$/scene/my_object.js" />
         <option value="$PROJECT_DIR$/scene/Button.js" />
-        <option value="$PROJECT_DIR$/scene/main/main_scene.js" />
         <option value="$PROJECT_DIR$/scene/button.js" />
-        <option value="$PROJECT_DIR$/Model/Model2D.js" />
-        <option value="$PROJECT_DIR$/Model/button.js" />
         <option value="$PROJECT_DIR$/Model/Point2D.js" />
+        <option value="$PROJECT_DIR$/Model/button.js" />
+        <option value="$PROJECT_DIR$/Model/Model2D.js" />
         <option value="$PROJECT_DIR$/game/utils.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/scene/start/start_scene.js" />
+        <option value="$PROJECT_DIR$/scene/main/paddle.js" />
+        <option value="$PROJECT_DIR$/scene/main/ball.js" />
+        <option value="$PROJECT_DIR$/scene/main/block.js" />
         <option value="$PROJECT_DIR$/scene/abstract_scene.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/game/guagame.js" />
+        <option value="$PROJECT_DIR$/scene/start/start_scene.js" />
+        <option value="$PROJECT_DIR$/scene/main/main_scene.js" />
       </list>
     </option>
   </component>
@@ -252,7 +244,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="320" />
     <option name="y" value="24" />
     <option name="width" value="1086" />
@@ -282,12 +274,13 @@
             <path>
               <item name="js" type="b2602c69:ProjectViewProjectNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="scene" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="js" type="b2602c69:ProjectViewProjectNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="scene" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -363,12 +356,12 @@
       <workItem from="1546576396359" duration="640000" />
       <workItem from="1546611892070" duration="939000" />
       <workItem from="1546659118612" duration="12286000" />
-      <workItem from="1546673363253" duration="169000" />
+      <workItem from="1546673363253" duration="19568000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102859000" />
+    <option name="totallyTimeSpent" value="122258000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -380,10 +373,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="-1" y="-35" width="1922" height="1116" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2387981" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.23827095" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.26622662" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -391,7 +384,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24986821" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.5208768" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.51925194" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32999474" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39979124" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -639,46 +632,14 @@
     <entry file="file://$PROJECT_DIR$/img/ball.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/scene/main/block.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levels.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scene/main/paddle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scene/main/ball.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scene/my_object.js" />
+    <entry file="file://$PROJECT_DIR$/scene/main/ball.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Model/Model2D.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/button.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        <state relative-caret-position="104">
+          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -691,46 +652,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game/utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        <state relative-caret-position="572">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scene/main/main_scene.js">
+    <entry file="file://$PROJECT_DIR$/levels.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1066">
-          <caret line="41" selection-start-line="40" selection-end-line="41" />
+        <state relative-caret-position="104">
+          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scene/main/block.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scene/main/paddle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scene/abstract_scene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state relative-caret-position="78">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/guagame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scene/start/start_scene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        <state relative-caret-position="824">
+          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/button.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        <state relative-caret-position="286">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/guagame.js">
+    <entry file="file://$PROJECT_DIR$/scene/main/main_scene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="74" selection-end-column="17" />
+        <state relative-caret-position="572">
+          <caret line="121" column="16" selection-start-line="121" selection-start-column="16" selection-end-line="121" selection-end-column="16" />
         </state>
       </provider>
     </entry>

@@ -6,7 +6,6 @@ function GuaGame(loads,callback) {
     this.images = {}
     //todo guagame 用单例 可能需要先实现面向对象的编程 涉及到code refactor
     //todo 希望最终能实现像是从上到下不断下坠的俄罗斯方块这样的类型
-    this.score = 0
     this.canvas = document.getElementById('id-canvas')
     this.context = this.canvas.getContext('2d')
     var g = this
@@ -29,8 +28,8 @@ GuaGame.prototype.test = function(){
     log('test')
 }
 
-GuaGame.prototype.drawModel2D = function(model){
-    this.context.drawImage(model.image,model.x,model.y,model.width,model.height)
+GuaGame.prototype.drawModel2D = function(model,scene){
+    this.context.drawImage(scene.models[model.name].image,model.x,model.y,model.width,model.height)
 }
 
 GuaGame.prototype.registerAction = function(key,callback){
@@ -77,4 +76,17 @@ GuaGame.prototype.registerScene = function (scene) {
     for (var i = 0; i < names.length; i++) {
         this.registerAction(names[i],scene.actions[names[i]])
     }
+}
+
+GuaGame.prototype.runWithScene = function (scene) {
+    // while(!scene.ready){
+    //
+    // }
+    this.update = function () {
+        scene.update()
+    }
+    this.draw = function () {
+        scene.draw()
+    }
+    this.registerScene(scene)
 }

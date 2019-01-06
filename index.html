@@ -5,13 +5,13 @@
     <title>Title</title>
     <script src="game/guagame.js"></script>
     <script src="game/utils.js"></script>
+    <script src="Model/Model2D.js"></script>
+    <script src="scene/abstract_scene.js"></script>
     <script src="scene/main/ball.js"></script>
     <script src="scene/main/paddle.js"></script>
     <script src="scene/main/block.js"></script>
     <script src="scene/main/main_scene.js"></script>
-    <script src="scene/abstract_scene.js"></script>
     <script src="scene/start/start_scene.js"></script>
-    <script src="Model/Model2D.js"></script>
     <script src="Model/button.js"></script>
     <script src="Model/Point2D.js"></script>
     <script src="levels.js"></script>
@@ -22,7 +22,6 @@
     <input id="id-input-speed" type="range" value="30">
 </body>
 <script>
-    var blocks = []
     //todo 这一块直接防到main_scene中 就不用作为参数传来传去了
     // var loads = {
     //     tBall:'img/ball.png',
@@ -37,30 +36,7 @@
     var __main = function () {
         var game = new GuaGame()
         var s = new StartScene(game)
-
-        // var game = new GuaGame(function (gua) {
-        //     //在图片加载完成之后再执行以上的代码 不然图片对象是undefined
-        //     // var s = MainScene(gua,blocks)
-        //     var s = new StartScene(gua)
-        //
-        //     gua.update = function () {
-        //         s.update()
-        //     }
-        //     gua.draw = function () {
-        //         s.draw()
-        //     }
-        //     gua.registerScene(s)
-        //     gua.runWithScene(s)
-        //     // gua.registerAction('a',function () {
-        //     //     p.moveLeft()
-        //     // })
-        //     // gua.registerAction('d',function () {
-        //     //     p.moveRight()
-        //     // })
-        //     // gua.registerAction(' ',function () {
-        //     //     b.fire()
-        //     // })
-        // })
+        game.runWithScene(s)
     }
 
     __main()
